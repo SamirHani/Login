@@ -40,7 +40,7 @@ function checkLogin() {
       inputs[0].value === Users[i].User &&
       inputs[1].value === Users[i].Pass
     ) {
-      location.href = 'welcome.html';
+      location.href = 'index2.html';
     } else {
       console.log('wrong username or Password');
     }
