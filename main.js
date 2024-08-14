@@ -50,26 +50,39 @@ function checkLogin() {
 loginButton.onclick = function () {
   checkLogin();
 };
-
+let ch = ['You have an account ?', 'Create an account'];
 // create an account new
-function CreateAnAccount() {
-  loginHeader.textContent = 'SignUp';
-  loginButton.textContent = 'SignUp';
-  create.textContent = 'You have an account ?';
-  loginButton.onclick = function () {
-    addUsers();
-    backToLogin();
-  };
+let ii = true;
+
+function CreateAnAccount(change) {
+  if (ii) {
+    ii = false;
+    loginHeader.textContent = 'SignUp';
+    loginButton.textContent = 'SignUp';
+    create.textContent = change;
+    loginButton.onclick = function () {
+      addUsers();
+      backToLogin();
+    };
+  } else {
+    ii = true;
+    loginHeader.textContent = 'Login';
+    loginButton.textContent = 'Login';
+    create.style.color = 'rgb(76, 125, 230)';
+    create.textContent = ch[1];
+  }
 }
 
 function backToLogin() {
   loginHeader.textContent = 'Login';
   loginButton.textContent = 'Login';
   create.style.color = 'rgb(76, 125, 230)';
-  create.textContent = 'Create an account';
+  create.textContent = ch[1];
   loginButton.onclick = function () {
     checkLogin();
   };
 }
 
-create.addEventListener('click', CreateAnAccount);
+create.onclick = function () {
+  CreateAnAccount(ch[0]);
+};
