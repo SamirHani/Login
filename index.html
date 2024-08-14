@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- The form ..-->
+    <div class="form-popup" id="myForm">
+      <form action="/action_page.php" class="form-container">
+        <!-- Login word section  -->
+        <div class="loginword">
+          <h1>Login</h1>
+          <p>Welcome back to the app</p>
+        </div>
+
+        <!-- input section  -->
+        <label for="email"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="email" required />
+
+        <label class="pas-lab" for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Password" name="psw" required />
+
+        <!-- buttons section  -->
+        <div class="btns">
+          <div class="keep">
+            <input name="check" type="checkbox" />
+            <label for="check">Keep me signed in</label>
+          </div>
+          <button type="button" class="btn login">Login</button>
+        </div>
+
+        <!-- create account section  -->
+        <div class="googlecreate">
+          <p class="or">or sign in with</p>
+          <div class="google">
+            <div>
+              <i
+                class="fa-brands fa-google"
+                style="color: #b197fc; font-size: 20px"></i>
+            </div>
+            <p>Continue with Google</p>
+          </div>
+          <p class="create">Create an account</p>
+        </div>
+      </form>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
